@@ -1,0 +1,21 @@
+{{ template "header" .Page}}
+
+
+
+
+{{ if .Projects }}
+
+<ul>
+    {{range .Page.Projects}}
+        <li><a href="/project/{{.Id}}">{{.Title}}</a> - Last updated on: {{formatDate .Updated}}</li>
+    {{end}}
+</ul>
+
+{{ else }}
+
+<p>No projects yet!<br>
+Watch this space :D</p>
+
+{{ end }}
+
+{{ template "footer" }}

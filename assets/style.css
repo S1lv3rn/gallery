@@ -1,0 +1,113 @@
+:root {
+    --dark-col: rgb(34, 29, 13);
+    --bg-col: rgb(240, 197, 90);
+    --link-col: rgb(0, 42, 72);
+}
+* {
+    box-sizing: border-box;
+    color: var(--dark-col);
+}
+
+a {
+    color:var(--link-col);
+    font-family: serif;
+    font-weight: bold;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 2px;
+
+}
+a:hover, a:focus {
+    text-decoration-style: solid;
+}
+
+h2 a {
+    color: var(--dark-col);
+    text-decoration-line:none;
+}
+
+hr {
+    border: 7px double var(--dark-col);
+}
+
+
+button {
+    display: block;
+    margin: auto;
+    background-color: var(--dark-col);
+    font-family: serif;
+    font-weight: bold;
+    padding: 5px 10px ;
+    color: var(--bg-col);
+    border: 8px double var(--bg-col);
+}
+button:hover, button:focus{
+    border: 8px double var(--link-col);
+}
+
+
+ 
+
+
+body {
+    position: relative;
+    font-family: sans-serif;
+    background-color:var(--bg-col);
+}
+
+header {
+    text-align: center;
+    font-family: serif;
+}
+
+.side-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    border: 10px double var(--dark-col);
+    padding: 10px;
+    list-style-type: none;
+    overflow: auto;
+}
+.side-panel ul {
+    list-style-type: none;
+    margin: 5px;
+    padding: 0;
+}
+
+
+.main-panel {
+    padding: 10px;
+    margin-left: 200px;
+}
+.main-panel article {
+   
+    margin: 10px;
+} 
+
+article hr {
+    border-width: 6px;
+}
+article h2{
+    margin: 0;
+    margin-top: 20px;
+    font-family: serif;
+}
+
+.demo img {
+    display: block;
+    border: 7px double var(--dark-col);
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    max-width: 900px;
+}
+
+
+
+footer {
+    bottom: 0;
+    height: 40px;
+    min-width: 100%;
+}

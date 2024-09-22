@@ -1,0 +1,421 @@
+Gallery Site
+
+cd Documents/prog/gallery/
+go run cmd/gallery.go 
+
+file:///home/silvern/Documents/prog/gallery/views/test.html
+
+--dark-col: rgb(34, 29, 13);
+--bg-col: rgb(240, 197, 90);
+--link-col: rgb(0, 42, 72);
+
+Todo 
+x https://learnlayout.com/ a bit more
+x make box borders plsssss
+x hr has padding/margin?
+x colour variables?
+x project test page
+x add semantics: 
+ https://www.aleksandrhovhannisyan.com/blog/semantic-html-accessibility/
+ https://learnlayout.com/
+x add styling
+x img box pls
+x button styling
+x subtitle
+
+
+x apply semantic html to site
+x appy CSS to site
+
+
+- put on git hub
+- figure out how to deploy
+
+
+- make projects
+ - https://doc.x3dom.org/
+ . neosite
+  - fix the html
+  - fix css
+  
+  : https://32bit.cafe/websiteideas/
+  - Guestbook
+  - Hit Counter 
+  - Badges 
+  - Shrine
+  - VTT for tricube Games TTRPG
+ . p5.js
+ . p5.xr
+ . three.js
+ . aframe
+ . pico-8
+ . canvas
+  - html5 gaming
+  	. dollmaker?
+  - https://textures.neocities.org/
+ . svg 
+  - svg gallery
+- submodule links?
+
+- dark mode 
+- style scroll bars?
+- accessablitity
+- self hosted fonts
+- other theming
+
+- sql maybe?
+- admin 
+
+
+
+- 2 pages
+- project Types:
+ - Aframe
+ - sgv
+ - canvas
+ - three.js
+ - p5.js
+ - p5.xr
+ - pico-8
+ 
+ 
+ 
+ 
+ 
+ 
+Routes:
+	/ - gallery
+	/project/{id}
+	/project/{id}/view -> if img, show full screen
+	
+	
+	/project/{id}/edit
+	/project/new
+ 
+
+
+
+To learn
+- Go
+- HTML 
+https://learnlayout.com/
+https://learn.shayhowe.com/html-css/
+https://www.aleksandrhovhannisyan.com/blog/semantic-html-accessibility/
+
+- Tailwind CSS
+
+- Templ?
+- HTMX?
+
+
+DONE
+GOLANG 1
+x make basic template using template 
+x make fake data
+x make routing for templates
+x test fake data
+x store fake data in json 
+x read from json string
+x read json from file
+x display epoch time as noraml formatted
+x how to stucture Golang projects
+
+ToDo
+
+HTML&CSS 1
+- learn better html (side bar nav)
+- nice css -> use daisy ui for ideas
+  - use daisy ui?
+  - use inpector to mock up
+- dark mode
+- accesablity 
+
+
+- store & display 2D projects 
+- store & display thumbnails 
+- project type enum
+- project view template 
+
+assets/
+	styles/
+	 - style.css
+	 - images
+	projects/
+	 - project-first-0/
+		  - thumb-img.png
+		  - svg file
+		  - NotesText.md?
+	 - project-second-1/
+		  - html file
+		  - thumb-img.png
+		  - NotesText.md?
+
+- how to store the project code:
+  - store as function in struct?
+  - store as html files?
+
+
+
+Go
+https://www.boot.dev/
+https://gobyexample.com/
+- to loops
+- go web servers
+- templ
+
+Website Design
+- html components
+- accessibality 
+- css
+- htmx
+
+
+
+First Requirments
+ home page showing all the projects
+ project page, displaying a playable project and notes
+ 
+Second Req
+ login for admin
+ edit notes
+ upload new project
+ sort projects by update, created, ect
+ search project name, tags, type
+ project tags
+
+
+Tech needed 1st
+ webpage template
+ home template
+ project templ
+ json data base
+ static folder
+ 
+Tech needed 2nd
+ project card templ
+ project lay outs
+ 
+Routing using mux
+MySQL? or just use json
+
+min vaible project:
+
+Data:
+
+	ProjectType: [Img, 2d, 3d, VR]
+	Text: string
+	
+	Project: {
+		Name: string
+		Type: ProjectType
+		projectUrl: urlString
+		Created: date
+		Updated: date
+		NoteTexts: Text[]
+	}
+	
+	Admin: {
+		Username: string
+		Password: Hash
+		SessionId: Hash
+	}
+	
+	Site: {
+		SiteUpdated: date
+		Projects: Project[]
+	}
+
+
+
+
+
+Home:
+
+	Gallery
+	-----------------
+	Projects
+	- Proj Name 1, last update
+	- [name], [update date]
+	- ...
+
+
+Project:
+
+	Project Name
+	--------------
+	
+	|  Navigation             |
+	| [Go back] [go to notes] |
+	 -------------------------
+	
+	Demo
+	[thumbnamil]
+	
+	{ if type <> 2d: // if img/2D, show full screen?
+		[Play Project btn] { 
+			if type = VR: go to ./view
+			else: start video/canvas
+		}
+	}
+	
+	
+	Notes
+	------
+	Created On: [date]
+	Last updated on: [date]
+	
+	{...Notes text...}
+	
+	[Go to top]
+
+
+
+New Project:
+	Checks for Auth
+
+	New Project
+	--------------
+	[Name]
+	[type |v]
+	thumbnail [upload pic]
+	content {variable depending on type}
+	Notes
+	[NoteText]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+the 8th wall
+needle tools
+
+
+Project Ideas
+- Pass AFrame School https://aframe.io/aframe-school/#/
+	- https://aframe.io/aframe-registry/
+- 3d/vr version of the website
+- pico-8
+- aframe + htmx
+- html5 canvas + htmx?
+	- https://textures.neocities.org/
+
+- multi player vrchat clone: aframe, htmx, websockets. audio
+	- 2d multiplayer websockets
+	- 3d multP use web socket? or other thing?
+	- htmx passing coords with websockets -> how fast?
+	-> how fast can the browser render webgl/3d stuff
+	-> how fast is aframe -> mult?
+	- avatars are a web component?
+	- test with latency:
+		- accesablity/ vr sickness
+	https://dev.to/jamesmillerblog/how-to-make-real-time-multiplayer-webxr-experiences-part-1-3jdh
+	https://dev.to/jamesmillerblog/how-to-make-real-time-multiplayer-webxr-experiences-part-2-3cc9
+	https://dev.to/jamesmillerblog/how-to-make-real-time-multiplayer-webxr-experiences-part-3-26ki
+
+- https://dev.to/mintycrisp/a-frame-web-xr-orb-sky-changer-scene-and-overview-17f5
+- fandom?
+- idle game with offline?
+- animations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+GO111MODULE=''
+GOARCH='amd64'
+GOBIN=''
+GOCACHE='/home/silvern/.cache/go-build'
+GOENV='/home/silvern/.config/go/env'
+GOEXE=''
+GOEXPERIMENT=''
+GOFLAGS=''
+GOHOSTARCH='amd64'
+GOHOSTOS='linux'
+GOINSECURE=''
+GOMODCACHE='/home/silvern/go/pkg/mod'
+GONOPROXY=''
+GONOSUMDB=''
+GOOS='linux'
+GOPATH='/home/silvern/go'
+GOPRIVATE=''
+GOPROXY='https://proxy.golang.org,direct'
+GOROOT='/usr/local/go'
+GOSUMDB='sum.golang.org'
+GOTMPDIR=''
+GOTOOLCHAIN='auto'
+GOTOOLDIR='/usr/local/go/pkg/tool/linux_amd64'
+GOVCS=''
+GOVERSION='go1.23.0'
+GODEBUG=''
+GOTELEMETRY='local'
+GOTELEMETRYDIR='/home/silvern/.config/go/telemetry'
+GCCGO='gccgo'
+GOAMD64='v1'
+AR='ar'
+CC='gcc'
+CXX='g++'
+CGO_ENABLED='1'
+GOMOD='/home/silvern/Documents/prog/gallery/go.mod'
+GOWORK=''
+CGO_CFLAGS='-O2 -g'
+CGO_CPPFLAGS=''
+CGO_CXXFLAGS='-O2 -g'
+CGO_FFLAGS='-O2 -g'
+CGO_LDFLAGS='-O2 -g'
+PKG_CONFIG='pkg-config'
+GOGCCFLAGS='-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build123668486=/tmp/go-build -gno-record-gcc-switches'
+
+# runtime/cgo
+_cgo_export.c:3:10: fatal error: stdlib.h: No such file or directory
+    3 | #include <stdlib.h>
+
+
+
+
